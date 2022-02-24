@@ -50,10 +50,10 @@ function checkRequried(inputArray) {
 }
 
 // Funcation to check length of input field
-function checkLength(input, max, min) {
-    if (input.value.length > min) {
+function checkLength(input, min, max) {
+    if (input.value.length < min) {
         showError(input,`${getFieldId(input)} needs to be at least ${min} characters`);
-    } else if (input.value.length < max) {
+    } else if (input.value.length > max) {
         showError(input, `${getFieldId(input)} need to be less than ${max} characters`);
     } else {
         showSuccess(input);
